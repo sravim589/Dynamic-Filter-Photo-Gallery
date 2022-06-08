@@ -1,13 +1,13 @@
 import React from "react";
 
-const MenuCard = ({ menuData }) => {
-  //   console.log(menuData);
+const Shop = ({ shopData }) => {
+  //   console.log(shopData);
 
   return (
     <>
       <section className="main-card--cointainer">
-        {menuData.map((curElem) => {
-          const { id, name, category, image, description } = curElem;
+        {shopData.map((curElem) => {
+          const { id, name, category, image,Area, Status, description } = curElem;
 
           return (
             <>
@@ -20,6 +20,8 @@ const MenuCard = ({ menuData }) => {
                     <span className="card-description subtle">
                       {description}
                     </span>
+                    <span className="card-author subtle"> {Area}</span>
+                    <span className="card-author subtl"> {Status}</span>
                     <div className="card-read">Read</div>
                   </div>
                   <img src={image} alt="images" className="card-media" />
@@ -35,4 +37,4 @@ const MenuCard = ({ menuData }) => {
   );
 };
 
-export default MenuCard;
+export default Shop;
